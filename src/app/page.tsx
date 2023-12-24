@@ -1,23 +1,21 @@
-import StickyNavbar from "@/components/navbar"
-import CarouselTransition from "@/components/carroussel"
-import SimpleFooter from"@/components/footer"
-import HorizontalCard from "@/components/horizontalCard"
-import BackgroundBlogCard from "@/components/backgroundCard"
-import CardDefault from "@/components/cardTrab"
+
+import CardPacientesHomePage from "@/components/CardInformacoesBasicas"
+import Image from "next/image"
 
 export default function Home() {
   return (
-   <div className="">
-    <StickyNavbar/>
-    <CarouselTransition/>
-    <div className="">
-      <HorizontalCard/>
-      <BackgroundBlogCard/>
-    </div>
-    <div>
-    <CardDefault/>
-    <SimpleFooter/>
-    </div>
-   </div>
+    <main className="bg-blue-gray-50 h-screen">
+      <div className="flex justify-center">
+        <Image
+        src="/logo.svg"
+        width={200}
+        height={200}
+        alt="logo"
+        />
+      </div>
+      <div>
+        <CardPacientesHomePage/>        
+      </div>
+    </main>
   )
 }

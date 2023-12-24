@@ -2,11 +2,4 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    margin: 0px;
-    font-family: Montserrat;
-}
 
-div{
-      margin-top: 0.5rem
-}
