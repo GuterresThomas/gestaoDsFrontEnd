@@ -26,7 +26,7 @@ export default function TabelaInformacoesBasicas() {
     useEffect(() => {
       const fetchData = async () => {
           try {
-              const response = await axios.get('http://localhost:3000/api/v1/pacientes');
+              const response = await axios.get('http://testepraticogestaodsapi.up.railway.app/api/v1/pacientes');
               setPatients(response.data);
           } catch (error) {
               console.error('Erro ao buscar pacientes:', error);

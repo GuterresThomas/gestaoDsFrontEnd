@@ -26,7 +26,7 @@ export default function DeleteCard({ handleClose }: { handleClose: () => void })
     const handleDelete = async () => {
         try {
             if (patientId) {
-                const response = await axios.delete(`http://localhost:3000/api/v1/pacientes/${patientId}`);
+                const response = await axios.delete(`http://testepraticogestaodsapi.up.railway.app/api/v1/pacientes/${patientId}`);
                 console.log(response.data); // Mensagem de confirmação ou outro feedback do backend
                 setOpen(true)
             } else {

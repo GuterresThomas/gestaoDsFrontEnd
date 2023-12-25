@@ -21,10 +21,14 @@ import { useEffect, useState } from "react";
         setWindowWidth(window.innerWidth);
       };
   
-      window.addEventListener('resize', handleWindowResize);
-  
-      return () => {
-        window.removeEventListener('resize', handleWindowResize);
+      if (typeof window !== 'undefined') {
+        setWindowWidth(window.innerWidth);
+        window.addEventListener('resize', handleWindowResize);
+        
+    
+        return () => {
+          window.removeEventListener('resize', handleWindowResize);
+        }
       };
     }, []);
  
@@ -42,8 +46,9 @@ import { useEffect, useState } from "react";
                             <Input 
                                 crossOrigin={undefined}
                                 size="md"
-                                placeholder="Pesquisar"
+                                placeholder="  Pesquisar"
                                 className="w-full"
+                                style={{ padding: '20px' }}
                             />
                             <div className="absolute pointer-events-none">
                               <MagnifyingGlassIcon className="h-5 text-blue-500" /> 
