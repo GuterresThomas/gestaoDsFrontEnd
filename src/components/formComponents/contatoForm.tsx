@@ -1,7 +1,8 @@
 "use client"
 import { UserCircleIcon } from "@heroicons/react/20/solid";
-import { Button, Input, Typography } from "@material-tailwind/react";
+import { Alert, Button, Input, Typography } from "@material-tailwind/react";
 import axios from "axios";
+import React from "react";
 import { useEffect, useState } from "react";
 
 interface ContatoFormData {
@@ -25,7 +26,9 @@ export default function ContatoForm() {
     complemento: "",
   });
   const [localStorageData, setLocalStorageData] = useState<any>(null);
-
+  const [open, setOpen] = React.useState(false);
+  const [openErrorMessage, setOpenErrorMessage] = React.useState(false);
+ 
   
 
   const handleInputChange = (fieldName: keyof ContatoFormData, value: string) => {
@@ -70,7 +73,6 @@ export default function ContatoForm() {
         bairro: data.bairro || "",
         cidade: data.localidade || "",
         uf: data.uf || "",
-        // Outros campos conforme necessário
       }));
     })
     .catch((error) => {
@@ -116,6 +118,7 @@ export default function ContatoForm() {
       
       
       console.log('Paciente criado com sucesso!', response.data);
+      setOpen(true)
       // Limpa o localStorage após enviar os dados
       setContatoFormState({
         cep: "",
@@ -132,6 +135,7 @@ export default function ContatoForm() {
       setLocalStorageData(null);
     } catch (error) {
       console.error('Erro ao criar paciente:', error);
+      setOpenErrorMessage(true)
     }
   };
   const { cep, cidade, uf, endereco, numero, bairro, complemento } = contatoFormState;
@@ -153,6 +157,7 @@ export default function ContatoForm() {
                   crossOrigin={undefined}
                   className=""
                   style={{width: 400, height: 50}}
+                  required
                   placeholder="cep"
                   />
               </div>
@@ -165,6 +170,7 @@ export default function ContatoForm() {
                   crossOrigin={undefined}
                   className=""
                   style={{width: 400, height: 50}}
+                  required
                   placeholder="Cidade"
                   />
               </div>
@@ -177,6 +183,7 @@ export default function ContatoForm() {
                   crossOrigin={undefined}
                   className=""
                   style={{width: 400, height: 50}}
+                  required
                   placeholder="UF"
                   />
               </div>
@@ -188,6 +195,7 @@ export default function ContatoForm() {
                   value={endereco}
                   crossOrigin={undefined}
                   style={{width: 400, height: 50}}
+                  required
                   placeholder="Endereço"
                   />
               </div>
@@ -200,6 +208,7 @@ export default function ContatoForm() {
                   crossOrigin={undefined}
                   className=""
                   style={{width: 400, height: 50}}
+                  required
                   placeholder="Digite"
                   />
               </div>
@@ -212,6 +221,7 @@ export default function ContatoForm() {
                   crossOrigin={undefined}
                   className=""
                   style={{width: 400, height: 50}}
+                  required
                   placeholder="Digite"
                   />
               </div>
@@ -224,6 +234,7 @@ export default function ContatoForm() {
                   value={complemento}
                   label="Complemento"
                   style={{width: 400, height: 50}}
+                  required
                   />
               </div>
             </div>
@@ -233,6 +244,12 @@ export default function ContatoForm() {
               </Button>
             </div>  
         </form>
+        <Alert open={open} onClose={() => setOpen(false)}>
+            Sucesso ao adicionar paciente.
+        </Alert>
+        <Alert open={openErrorMessage} onClose={() => setOpenErrorMessage(false)}>
+            Erro ao adicionar paciente.
+        </Alert>
     </div>
   );
 };

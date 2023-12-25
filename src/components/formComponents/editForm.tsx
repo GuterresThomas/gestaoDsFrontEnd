@@ -1,8 +1,9 @@
 "use client"
 import { useEffect, useState } from "react";
-import { Input, Button, Select, Option, Textarea } from "@material-tailwind/react";
+import { Input, Button, Select, Option, Textarea, Alert } from "@material-tailwind/react";
 import axios from "axios";
 import { UserCircleIcon } from "@heroicons/react/20/solid";
+import React from "react";
 
 
 interface EditFormData {
@@ -45,8 +46,10 @@ export default function EditForm() {
     complemento: "",
   });
   const [patientId, setPatientId] = useState<number | null>(null);
-
   const patientIdFromLocalStorage = localStorage.getItem('selectedPatientId');
+  const [open, setOpen] = React.useState(false);
+  const [openErrorMessage, setOpenErrorMessage] = React.useState(false);
+
   
   
     let parsedPatientId: number | null = null;
@@ -98,9 +101,11 @@ export default function EditForm() {
       const response = await axios.put(`http://localhost:3000/api/v1/pacientes/${patientId}`, editFormState);
       console.log('Paciente atualizado com sucesso!', response.data);
       console.log('id armazenado no estado, na hora do envio: ', patientId)
+      setOpen(true)
       setPatientId(null);
     } catch (error) {
       console.error('Erro ao atualizar paciente:', error);
+      setOpenErrorMessage(true)
     }} else{
         console.error('ID do paciente inválido.');
     }
@@ -309,6 +314,12 @@ export default function EditForm() {
                 </Button>
               </div>
       </form>
+      <Alert open={open} onClose={() => setOpen(false)}>
+        Sucesso ao editar paciente.
+    </Alert>
+    <Alert open={openErrorMessage} onClose={() => setOpenErrorMessage(false)}>
+        Erro ao editar paciente.
+    </Alert>
     </div>
   );
 };

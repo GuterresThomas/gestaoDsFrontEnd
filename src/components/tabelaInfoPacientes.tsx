@@ -137,11 +137,11 @@ export default function TabelaInformacoesBasicas() {
           className="absolute top-0 right-0 cursor-pointer mt-5 mb-5 mr-0"
           onClick={handleClose}
         />
-          <Button style={{width: 575, margin: 15}} onClick={() => handleOpenEditForm()} className="bg-gray-300 hover:bg-blue-gray-200 text-black p-5 m-5">
+          <Button style={{width: 500, margin: 15}} onClick={() => handleOpenEditForm()} className="bg-gray-300 hover:bg-blue-gray-200 text-black p-5 m-5">
             Editar
           </Button>
           <br/>
-          <Button style={{width: 575, margin: 15}} onClick={() => {handleOpenDeleteCard()}} className="bg-gray-300 hover:bg-blue-gray-200 text-black p-5 m-5">
+          <Button style={{width: 500, margin: 15}} onClick={() => {handleOpenDeleteCard()}} className="bg-gray-300 hover:bg-blue-gray-200 text-black p-5 m-5">
             Excluir
           </Button>
         </DialogBody>
