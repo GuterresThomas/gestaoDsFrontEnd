@@ -83,7 +83,7 @@ export default function EditForm() {
       setPatientId(parsedPatientId);
       const fetchPatientData = async () => {
         try {
-          const response = await axios.get(`http://testepraticogestaodsapi.up.railway.app/api/v1/pacientes/${parsedPatientId}`);
+          const response = await axios.get(`https://testepraticogestaodsapi.up.railway.app/api/v1/pacientes/${parsedPatientId}`);
           const patientData: EditFormData = response.data;
           // Atualiza o estado do formulário com os dados do paciente
           setEditFormState(patientData);
@@ -113,7 +113,7 @@ export default function EditForm() {
     console.log('Id logo antes do envio: ', patientId)
     if (patientId && !isNaN(patientId)) {
     try {
-      const response = await axios.put(`http://testepraticogestaodsapi.up.railway.app/api/v1/pacientes/${patientId}`, editFormState);
+      const response = await axios.put(`https://testepraticogestaodsapi.up.railway.app/api/v1/pacientes/${patientId}`, editFormState);
       console.log('Paciente atualizado com sucesso!', response.data);
       console.log('id armazenado no estado, na hora do envio: ', patientId)
       setOpen(true)

@@ -114,7 +114,7 @@ export default function ContatoForm() {
     
     try {
       
-      const response = await axios.post('http://testepraticogestaodsapi.up.railway.app/api/v1/pacientes', combinedFormData);
+      const response = await axios.post('https://testepraticogestaodsapi.up.railway.app/api/v1/pacientes', combinedFormData);
       
       
       console.log('Paciente criado com sucesso!', response.data);
