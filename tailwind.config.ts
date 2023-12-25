@@ -5,7 +5,6 @@ module.exports = withMT({
   theme: {
     extend: {
       fontFamily: {
-        'montserrat': ['Montserrat'],
     }
     },
   },
