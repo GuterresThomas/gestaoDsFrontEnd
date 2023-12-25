@@ -4,11 +4,11 @@
 
 ## Teste prático para Front end gestãoDS.
 
-Esse projeto foi feito usando React, nextJS e Material-Tailwind como biblioteca styled-components,para conexão com a api fiz uso do axios, a api fiz em nestJs e Pgsql como banco para armazenar os dados.
+Esse projeto foi feito usando React, nextJS e Material-Tailwind como biblioteca styled-components,para conexão com a api fiz uso do axios, a api fiz em nestJs e Pgsql como banco para armazenar os dados e fiz o deploy dela usando railway.
 
 link do projeto: [https://gestao-ds-front-end.vercel.app/]
 
-link do repositório da api: [https://github.com/GuterresThomas/testePraticoGestaoDsApi]
+link do repositório da api(aqui tem mais informações dos endpoints e suas funcionalidades): [https://github.com/GuterresThomas/testePraticoGestaoDsApi]
 
 
 ## Para rodar local:
