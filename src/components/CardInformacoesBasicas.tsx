@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import { MagnifyingGlassIcon, PlusIcon } from "@heroicons/react/20/solid";
 import {
     Card,
