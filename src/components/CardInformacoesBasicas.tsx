@@ -14,7 +14,7 @@ import {
 import { useEffect, useState } from "react";
  
   export default function CardPacientesHomePage() {
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [windowWidth, setWindowWidth] = useState(0)
 
     useEffect(() => {
       const handleWindowResize = () => {
