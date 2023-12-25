@@ -31,6 +31,13 @@ import { useEffect, useState } from "react";
         }
       };
     }, []);
+
+        // Retorna um placeholder ou estado de carregamento se windowWidth ainda não está disponível
+      if (!windowWidth) {
+        return <div>Loading...</div>;
+      }
+
+      // Renderiza o componente após windowWidth ficar disponível
  
     return (
       <Card className=" max-w-[24rem] overflow-hidden">
