@@ -1,5 +1,6 @@
-<img src="https://www.gestaods.com.br/wp-content/uploads/2022/06/logo_login.png"></img>
-
+<p align="center">
+    <img src="https://www.gestaods.com.br/wp-content/uploads/2022/06/logo_login.png"></img>
+</p>
 ## Teste prático para Front end gestãoDS.
 
 Esse projeto foi feito usando React, nextJS e Material-Tailwind como biblioteca styled-components,para conexão com a api fiz uso do axios, a api fiz em nestJs e Pgsql como banco para armazenar os dados.
