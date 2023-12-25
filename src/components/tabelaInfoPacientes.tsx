@@ -152,7 +152,7 @@ export default function TabelaInformacoesBasicas() {
         handler={handleOpenEditForm}
         className="bg-transparent shadow-none"
       >
-        <Card style={{overflowY: 'auto', scrollbarWidth: 'thin', height: 500, padding: 30, margin: -30}}>
+        <Card style={{overflowY: 'auto', scrollbarWidth: 'thin', height: 500, padding: 30}}>
           <div className="">
             <XMarkIcon style={{height: 40, cursor: 'pointer'}} onClick={handleCloseEditForm}></XMarkIcon>
             <EditForm/>
