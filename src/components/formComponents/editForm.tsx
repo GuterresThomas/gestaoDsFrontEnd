@@ -49,6 +49,21 @@ export default function EditForm() {
   const patientIdFromLocalStorage = localStorage.getItem('selectedPatientId');
   const [open, setOpen] = React.useState(false);
   const [openErrorMessage, setOpenErrorMessage] = React.useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleWindowResize);
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, []);
+
 
   
   
@@ -113,12 +128,12 @@ export default function EditForm() {
 
 
   return (
-    <div className="p-10">
+    <div style={{ width: windowWidth < 640 ? '100%' : '100%' }}>
       <div>
             <UserCircleIcon style={{height: 200}}/>
         </div>
-        <form className="flex p-2 align-middle justify-start flex-col" onSubmit={handleEditFormSubmit}>
-            <div className="p-2">
+        <form className="flex flex-col" onSubmit={handleEditFormSubmit}>
+            <div className="">
                 <label htmlFor="Paciente">Paciente</label>
                 <Input
                 type="text"
@@ -130,7 +145,7 @@ export default function EditForm() {
                 onChange={(e) => handleInputChange('paciente', e.target.value)}
                 />
             </div>
-            <div className="p-2">
+            <div className="">
                 <label htmlFor="Apelido">Apelido</label>
                 <Input
                 value={editFormState.apelido}
@@ -143,7 +158,7 @@ export default function EditForm() {
                 onChange={(e) => handleInputChange('apelido', e.target.value)}
                 />
             </div>
-            <div className="p-2">
+            <div className="">
                 <label htmlFor="Nacionalidade">Nacionalidade</label>
                 <Input
                 value={editFormState.nacionalidade}
@@ -155,7 +170,7 @@ export default function EditForm() {
                 onChange={(e) => handleInputChange('nacionalidade', e.target.value)}
                 />
             </div>
-            <div className="p-2">
+            <div className="">
                 <label htmlFor="Nascimento">Nascimento</label>
                 <Input
                 value={editFormState.dataDeNascimento}
@@ -166,7 +181,7 @@ export default function EditForm() {
                 onChange={(e) => handleInputChange('dataDeNascimento', e.target.value)}
                 />
             </div>
-            <div className="p-2">
+            <div className="">
                 <label htmlFor="CPF">CPF</label>
                 <Input
                 value={editFormState.cpf}
@@ -178,7 +193,7 @@ export default function EditForm() {
                 onChange={(e) => handleInputChange('cpf', e.target.value)}
                 />
             </div>
-            <div className="p-2">
+            <div className="">
                 <label htmlFor="RG">RG</label>
                 <Input
                 value={editFormState.rg}
@@ -190,7 +205,7 @@ export default function EditForm() {
                 onChange={(e) => handleInputChange('rg', e.target.value)}
                 />
             </div>
-            <div className="p-2">
+            <div className="">
                 <label htmlFor="Gênero">Gênero</label>
                 <Select
                 value={editFormState.genero || ""}
@@ -204,7 +219,7 @@ export default function EditForm() {
                 </Select>
                 
             </div>
-            <div className="p-2">
+            <div className="">
                 <label htmlFor="Estado Civil">Estado Civil</label>
                 <Select
                 value={editFormState.estadoCivil || ""}
@@ -226,7 +241,7 @@ export default function EditForm() {
                  label="Observações Adicionais"
                 />
             </div>
-            <div className="p-2">
+            <div className="">
                   <label htmlFor="cep">cep</label>
                   <Input
                   onChange={(e) => handleInputChange('cep', e.target.value)}
@@ -238,7 +253,7 @@ export default function EditForm() {
                   placeholder="cep"
                   />
               </div>
-              <div className="p-2">
+              <div className="">
                   <label htmlFor="cidade">Cidade</label>
                   <Input
                   onChange={(e) => handleInputChange('cidade', e.target.value)}
@@ -250,7 +265,7 @@ export default function EditForm() {
                   placeholder="Cidade"
                   />
               </div>
-              <div className="p-2">
+              <div className="">
                   <label htmlFor="UF">UF</label>
                   <Input
                   onChange={(e) => handleInputChange('uf', e.target.value)}
@@ -262,7 +277,7 @@ export default function EditForm() {
                   placeholder="UF"
                   />
               </div>
-              <div className="p-2">
+              <div className="">
                   <label htmlFor="Endereço">Endereço</label>
                   <Input
                   onChange={(e) => handleInputChange('endereco', e.target.value)}
@@ -273,7 +288,7 @@ export default function EditForm() {
                   placeholder="Endereço"
                   />
               </div>
-              <div className="p-2">
+              <div className="">
                   <label htmlFor="Numero">Numero</label>
                   <Input
                   onChange={(e) => handleInputChange('numero', e.target.value)}
@@ -285,7 +300,7 @@ export default function EditForm() {
                   placeholder="Digite"
                   />
               </div>
-              <div className="p-2">
+              <div className="">
                   <label htmlFor="Bairro">Bairro</label>
                   <Input
                   onChange={(e) => handleInputChange('bairro', e.target.value)}
@@ -297,7 +312,7 @@ export default function EditForm() {
                   placeholder="Digite"
                   />
               </div>
-              <div className="p-2">
+              <div className="">
                   <label htmlFor="Complemento">Complemento</label>
                   <Input
                   onChange={(e) => handleInputChange('complemento', e.target.value)}

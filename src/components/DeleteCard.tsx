@@ -6,7 +6,7 @@ import Image from "next/image"
 import React from "react";
 import { useEffect, useState } from "react";
 
-export default function DeleteCard() {
+export default function DeleteCard({ handleClose }: { handleClose: () => void }){
     const [patientId, setPatientId] = useState<number | null>(null);
     const [open, setOpen] = React.useState(false);
     const [openErrorMessage, setOpenErrorMessage] = React.useState(false);
@@ -38,6 +38,7 @@ export default function DeleteCard() {
             setOpenErrorMessage(true)
         }
     };
+
     return(
         <Card>
             <CardHeader className="flex justify-start" style={{height: 60, margin: 0, marginTop: -48}}>
@@ -60,7 +61,7 @@ export default function DeleteCard() {
                 </Typography>
             </CardBody>
             <CardFooter className="flex justify-end">        
-                <Button className="bg-transparent" style={{border: '1px solid blue', marginRight: 10}}>
+                <Button className="bg-transparent" style={{border: '1px solid blue', marginRight: 10}}   onClick={handleClose}>
                     <Typography className=" text-light-blue-500 font-semibold">Cancelar</Typography>
                 </Button>
                 <Button className="bg-red-500" onClick={handleDelete}>

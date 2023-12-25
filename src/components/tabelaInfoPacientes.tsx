@@ -74,9 +74,9 @@ export default function TabelaInformacoesBasicas() {
   }
  
   return (
-    <Card className="h-full w-full overflow-scroll">
+    <Card className="h-full w-full" style={{overflowY: 'auto',}}>
       <table className="w-full min-w-max table-auto text-left">
-        <thead>
+        <thead style={{overflowY: 'auto'}}>
           <tr>
             {TABLE_HEAD.map((head) => (
               <th key={head} className="border-b border-blue-gray-100 bg-blue-gray-50 p-4">
@@ -132,16 +132,16 @@ export default function TabelaInformacoesBasicas() {
         style={{height: 250}}
       >
         <DialogBody className=" p-5">
-        <XCircleIcon
+        <XMarkIcon
           style={{ height: 40 }}
           className="absolute top-0 right-0 cursor-pointer mt-5 mb-5 mr-0"
           onClick={handleClose}
         />
-          <Button style={{width: 500, margin: 15}} onClick={() => handleOpenEditForm()} className="bg-gray-300 hover:bg-blue-gray-200 text-black p-5 m-5">
+          <Button style={{marginBottom: 15, marginTop: 15}} onClick={() => handleOpenEditForm()} className="bg-gray-300 w-full hover:bg-blue-gray-200 text-black p-5 m-5">
             Editar
           </Button>
           <br/>
-          <Button style={{width: 500, margin: 15}} onClick={() => {handleOpenDeleteCard()}} className="bg-gray-300 hover:bg-blue-gray-200 text-black p-5 m-5">
+          <Button onClick={() => {handleOpenDeleteCard()}} className="bg-gray-300 w-full hover:bg-blue-gray-200 text-black p-5 m-5">
             Excluir
           </Button>
         </DialogBody>
@@ -152,9 +152,9 @@ export default function TabelaInformacoesBasicas() {
         handler={handleOpenEditForm}
         className="bg-transparent shadow-none"
       >
-        <Card className="flex" style={{overflowY: 'auto', scrollbarWidth: 'thin', height: 600, width: 500}}>
-          <div className="" style={{}}>
-            <XCircleIcon style={{height: 40, cursor: 'pointer'}} onClick={handleCloseEditForm}></XCircleIcon>
+        <Card style={{overflowY: 'auto', scrollbarWidth: 'thin', height: 600, padding: 30, margin: -30}}>
+          <div className="">
+            <XMarkIcon style={{height: 40, cursor: 'pointer'}} onClick={handleCloseEditForm}></XMarkIcon>
             <EditForm/>
           </div>
         </Card>
@@ -165,14 +165,14 @@ export default function TabelaInformacoesBasicas() {
         handler={handleOpenDeleteCard}
         className="bg-transparent shadow-none"
       >
-        <Card className="" style={{ overflowY: 'auto', width: '40vw', scrollbarWidth: 'thin'}}>
+        <Card className="" style={{ overflowY: 'auto', scrollbarWidth: 'thin'}}>
         <div className="flex justify-end" style={{height:50}}>
           <XMarkIcon
             style={{height: 30, cursor: 'pointer', marginTop:18, marginRight: 10, zIndex: 9999 }}
             onClick={handleCloseDeleteCard}
           />
         </div>
-        <DeleteCard />
+        <DeleteCard handleClose={handleCloseDeleteCard}/>
       </Card>
       </Dialog>
     </Card> 
