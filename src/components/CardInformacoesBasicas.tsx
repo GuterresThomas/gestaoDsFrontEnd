@@ -1,5 +1,5 @@
 "use client"
-import { MagnifyingGlassIcon, PlusIcon } from "@heroicons/react/20/solid";
+import { ArrowPathIcon, MagnifyingGlassIcon, PlusIcon } from "@heroicons/react/20/solid";
 import {
     Card,
     CardHeader,
@@ -12,6 +12,7 @@ import {
   } from "@material-tailwind/react";
   import TabelaInformacoesBasicas from "./tabelaInfoPacientes"
 import { useEffect, useState } from "react";
+import { EllipsisHorizontalIcon } from "@heroicons/react/24/outline";
  
   export default function CardPacientesHomePage() {
     const [windowWidth, setWindowWidth] = useState(0)
@@ -34,7 +35,9 @@ import { useEffect, useState } from "react";
 
         // Retorna um placeholder ou estado de carregamento se windowWidth ainda não está disponível
       if (!windowWidth) {
-        return <div>Loading...</div>;
+        return <div className="flex justify-center">
+            <EllipsisHorizontalIcon style={{height:40}}/>
+          </div>;
       }
 
       // Renderiza o componente após windowWidth ficar disponível
