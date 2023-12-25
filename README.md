@@ -46,11 +46,19 @@ Então abra [http://localhost:3000](http://localhost:3000) no seu navegador para
 
 ## Scripts Disponíveis
 
-# npm run dev: Inicia o servidor de desenvolvimento.
+# npm run dev: 
 
-# npm run build: Compila a aplicação para produção.
+Inicia o servidor de desenvolvimento.
 
-# npm start: Inicia a aplicação em modo de produção.
+# npm run build: 
 
-# npm run lint: Executa o linter para identificar e corrigir problemas no código.
+Compila a aplicação para produção.
+
+# npm start: 
+
+Inicia a aplicação em modo de produção.
+
+# npm run lint: 
+
+Executa o linter para identificar e corrigir problemas no código.
 
