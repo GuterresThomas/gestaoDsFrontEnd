@@ -10,7 +10,7 @@ import {
     Button,
     Input,
   } from "@material-tailwind/react";
-  import TabelaInformacoesBasicas from "./formComponents/tabelaInfoPacientes"
+  import TabelaInformacoesBasicas from "./tabelaInfoPacientes"
 import { useState } from "react";
    
   export default function CardPacientesHomePage() {

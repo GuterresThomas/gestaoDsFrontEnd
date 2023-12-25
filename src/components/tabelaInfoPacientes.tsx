@@ -11,7 +11,8 @@ import {
 import axios from "axios";
 import React from "react";
 import { useEffect, useState } from "react";
-import EditForm from "./editForm";
+import EditForm from "./formComponents/editForm";
+import DeleteCard from "./DeleteCard";
  
 const TABLE_HEAD = ["Nome", "CPF", "Data de nascimento", "Cidade", "Ações"];
  
@@ -19,8 +20,8 @@ const TABLE_HEAD = ["Nome", "CPF", "Data de nascimento", "Cidade", "Ações"];
 export default function TabelaInformacoesBasicas() {
     const [open, setOpen] = useState(false); 
     const [patients, setPatients] = useState([]);
-    const [selectedPatientId, setSelectedPatientId] = useState<number | null>(null);
     const [openEditForm, setOpenEditForm] = React.useState(false);
+    const [openDeleteCard, setOpenDeleteCard] = React.useState(false);
 
     useEffect(() => {
       const fetchData = async () => {
@@ -60,6 +61,17 @@ export default function TabelaInformacoesBasicas() {
     setOpenEditForm(false);
   };
 
+
+  const handleOpenDeleteCard = () => {
+    setOpenDeleteCard(true);
+    const patientIdFromLocalStorage = localStorage.getItem('selectedPatientId');
+    console.log('id no momento da abertura do modal de exclusão: ', patientIdFromLocalStorage)
+    console.log(typeof patientIdFromLocalStorage)
+  }
+
+  const handleCloseDeleteCard = () => {
+    setOpenDeleteCard(false)
+  }
  
   return (
     <Card className="h-full w-full overflow-scroll">
@@ -129,7 +141,7 @@ export default function TabelaInformacoesBasicas() {
             Editar
           </Button>
           <br/>
-          <Button style={{width: 575, margin: 15}} className="bg-gray-300 hover:bg-blue-gray-200 text-black p-5 m-5">
+          <Button style={{width: 575, margin: 15}} onClick={() => {handleOpenDeleteCard()}} className="bg-gray-300 hover:bg-blue-gray-200 text-black p-5 m-5">
             Excluir
           </Button>
         </DialogBody>
@@ -146,6 +158,22 @@ export default function TabelaInformacoesBasicas() {
             <EditForm/>
           </div>
         </Card>
+      </Dialog>
+      <Dialog
+        size="xs"
+        open={openDeleteCard}
+        handler={handleOpenDeleteCard}
+        className="bg-transparent shadow-none"
+      >
+        <Card className="" style={{ overflowY: 'auto', width: '40vw', scrollbarWidth: 'thin'}}>
+        <div className="flex justify-end" style={{height:50}}>
+          <XMarkIcon
+            style={{height: 30, cursor: 'pointer', marginTop:18, marginRight: 10, zIndex: 9999 }}
+            onClick={handleCloseDeleteCard}
+          />
+        </div>
+        <DeleteCard />
+      </Card>
       </Dialog>
     </Card> 
   );
