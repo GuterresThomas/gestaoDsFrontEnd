@@ -8,11 +8,6 @@ link do projeto: [https://gestao-ds-front-end.vercel.app/]
 link do repositório da api: [https://github.com/GuterresThomas/testePraticoGestaoDsApi]
 
 
-## Estrutura do projeto
-
-
-
-
 ## Para rodar local:
 
 Certifique-se de ter o Node.js instalado na sua máquina antes de prosseguir.
