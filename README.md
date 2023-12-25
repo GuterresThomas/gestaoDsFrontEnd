@@ -1,4 +1,4 @@
-<img src="/logo.svg"></img>
+<img src="https://www.gestaods.com.br/wp-content/uploads/2022/06/logo_login.png"></img>
 
 ## Teste prático para Front end da gestãoDS
 
