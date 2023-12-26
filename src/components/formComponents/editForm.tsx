@@ -151,85 +151,85 @@ export default function EditForm() {
             <UserCircleIcon style={{height: 200}}/>
         </div>
         <form className="flex flex-col" onSubmit={handleEditFormSubmit}>
-            <div className="">
+            <div className="p-1">
                 <label htmlFor="Paciente">Paciente</label>
                 <Input
                 type="text"
                 value={editFormState.paciente}
                 crossOrigin={undefined}
                 className=""
-                style={{width: 375, borderRight: 'none', height: 50}}
+                style={{width: 367, borderRight: 'none', height: 50}}
                 placeholder="Paciente"
                 onChange={(e) => handleInputChange('paciente', e.target.value)}
                 />
             </div>
-            <div className="">
+            <div className="p-1">
                 <label htmlFor="Apelido">Apelido</label>
                 <Input
                 value={editFormState.apelido}
                 type="text"
                 crossOrigin={undefined}
                 className=""
-                style={{width: 375, borderRight: 'none',  height: 50}}
+                style={{width: 367, borderRight: 'none',  height: 50}}
                 placeholder="Apelido"
                 
                 onChange={(e) => handleInputChange('apelido', e.target.value)}
                 />
             </div>
-            <div className="">
+            <div className="p-1">
                 <label htmlFor="Nacionalidade">Nacionalidade</label>
                 <Input
                 value={editFormState.nacionalidade}
                 type="text"
                 crossOrigin={undefined}
                 className=""
-                style={{width: 375, borderRight: 'none',  height: 50}}
+                style={{width: 367, borderRight: 'none',  height: 50}}
                 placeholder="Nacionalidade"
                 onChange={(e) => handleInputChange('nacionalidade', e.target.value)}
                 />
             </div>
-            <div className="">
+            <div className="p-1">
                 <label htmlFor="Nascimento">Nascimento</label>
                 <Input
                 value={editFormState.dataDeNascimento}
                 type="date"
                 crossOrigin={undefined}
-                style={{width: 375, borderRight: 'none',  height: 50}}
+                style={{width: 367, borderRight: 'none',  height: 50}}
                 placeholder="Nascimento"
                 onChange={(e) => handleInputChange('dataDeNascimento', e.target.value)}
                 />
             </div>
-            <div className="">
+            <div className="p-1">
                 <label htmlFor="CPF">CPF</label>
                 <Input
                 value={editFormState.cpf}
                 type="text"
                 crossOrigin={undefined}
                 className=""
-                style={{width: 375, borderRight: 'none',  height: 50}}
+                style={{width: 367, borderRight: 'none',  height: 50}}
                 placeholder="Digite"
                 onChange={(e) => handleInputChange('cpf', e.target.value)}
                 />
             </div>
-            <div className="">
+            <div className="p-1">
                 <label htmlFor="RG">RG</label>
                 <Input
                 value={editFormState.rg}
                 type="text"
                 crossOrigin={undefined}
                 className=""
-                style={{width: 375, borderRight: 'none',  height: 50}}
+                style={{width: 367, borderRight: 'none',  height: 50}}
                 placeholder="Digite"
                 onChange={(e) => handleInputChange('rg', e.target.value)}
                 />
             </div>
-            <div className="">
+            <div className="p-1">
                 <label htmlFor="Gênero">Gênero</label>
                 <Select
                 value={editFormState.genero || ""}
                 label="Gênero"
                 onChange={(value) => handleInputChange('genero', value|| "")} 
-                style={{width: 375, borderRight: 'none',  height: 50}}
+                style={{width: 367, borderRight: 'none',  height: 50}}
                 >
                     <Option value="Masculino">Masculino</Option>
                     <Option value="Feminino">Feminino</Option>
@@ -237,14 +237,14 @@ export default function EditForm() {
                 </Select>
                 
             </div>
-            <div className="">
+            <div className="p-1">
                 <label htmlFor="Estado Civil">Estado Civil</label>
                 <Select
                 value={editFormState.estadoCivil || ""}
                 label="Estado civil"
                 onChange={(value) => handleInputChange('estadoCivil', value|| "")} 
                 
-                style={{width: 375, borderRight: 'none',  height: 50}}
+                style={{width: 367, borderRight: 'none',  height: 50}}
                 >
                     <Option value="Casado">Casado(a)</Option>
                     <Option value="Solteiro">Solteiro(a)</Option>
@@ -259,7 +259,7 @@ export default function EditForm() {
                  label="Observações Adicionais"
                 />
             </div>
-            <div className="">
+            <div className="p-1">
                   <label htmlFor="cep">cep</label>
                   <Input
                   onChange={(e) => handleInputChange('cep', e.target.value)}
@@ -267,11 +267,11 @@ export default function EditForm() {
                   value={editFormState.cep}
                   crossOrigin={undefined}
                   className=""
-                  style={{width: 375, borderRight: 'none',  height: 50}}
+                  style={{width: 367, borderRight: 'none',  height: 50}}
                   placeholder="cep"
                   />
               </div>
-              <div className="">
+              <div className="p-1">
                   <label htmlFor="cidade">Cidade</label>
                   <Input
                   onChange={(e) => handleInputChange('cidade', e.target.value)}
@@ -279,11 +279,11 @@ export default function EditForm() {
                   value={editFormState.cidade}
                   crossOrigin={undefined}
                   className=""
-                  style={{width: 375, borderRight: 'none',  height: 50}}
+                  style={{width: 367, borderRight: 'none',  height: 50}}
                   placeholder="Cidade"
                   />
               </div>
-              <div className="">
+              <div className="p-1">
                   <label htmlFor="UF">UF</label>
                   <Input
                   onChange={(e) => handleInputChange('uf', e.target.value)}
@@ -291,22 +291,22 @@ export default function EditForm() {
                   value={editFormState.uf}
                   crossOrigin={undefined}
                   className=""
-                  style={{width: 375, borderRight: 'none',  height: 50}}
+                  style={{width: 367, borderRight: 'none',  height: 50}}
                   placeholder="UF"
                   />
               </div>
-              <div className="">
+              <div className="p-1">
                   <label htmlFor="Endereço">Endereço</label>
                   <Input
                   onChange={(e) => handleInputChange('endereco', e.target.value)}
                   type="text"
                   value={editFormState.endereco}
                   crossOrigin={undefined}
-                  style={{width: 375, borderRight: 'none',  height: 50}}
+                  style={{width: 367, borderRight: 'none',  height: 50}}
                   placeholder="Endereço"
                   />
               </div>
-              <div className="">
+              <div className="p-1">
                   <label htmlFor="Numero">Numero</label>
                   <Input
                   onChange={(e) => handleInputChange('numero', e.target.value)}
@@ -314,11 +314,11 @@ export default function EditForm() {
                   value={editFormState.numero}
                   crossOrigin={undefined}
                   className=""
-                  style={{width: 375, borderRight: 'none',  height: 50}}
+                  style={{width: 367, borderRight: 'none',  height: 50}}
                   placeholder="Digite"
                   />
               </div>
-              <div className="">
+              <div className="p-1">
                   <label htmlFor="Bairro">Bairro</label>
                   <Input
                   onChange={(e) => handleInputChange('bairro', e.target.value)}
@@ -326,11 +326,11 @@ export default function EditForm() {
                   value={editFormState.bairro}
                   crossOrigin={undefined}
                   className=""
-                  style={{width: 375, borderRight: 'none',  height: 50}}
+                  style={{width: 367, borderRight: 'none',  height: 50}}
                   placeholder="Digite"
                   />
               </div>
-              <div className="">
+              <div className="p-1">
                   <label htmlFor="Complemento">Complemento</label>
                   <Input
                   onChange={(e) => handleInputChange('complemento', e.target.value)}
@@ -338,7 +338,7 @@ export default function EditForm() {
                   crossOrigin={undefined}
                   value={editFormState.complemento}
                   label="Complemento"
-                  style={{width: 375, borderRight: 'none',  height: 50}}
+                  style={{width: 367, borderRight: 'none',  height: 50}}
                   />
               </div>
               <Alert open={open} onClose={() => setOpen(false)}>

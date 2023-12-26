@@ -119,119 +119,119 @@ export default function CardComTabsParaAdicionarPaciente() {
       return (
         <Card className="w-full">
           <div className="p-10">
-        <div>
-            <UserCircleIcon style={{height: 200}}/>
-        </div>
-        <form className="flex flex-wrap justify-start" onSubmit={handleSubmit}>
-            <div className="p-2">
-                <label htmlFor="Paciente">Paciente</label>
-                <Input
-                type="text"
-                value={paciente}
-                crossOrigin={undefined}
-                className=""
-                style={{width: 375, height: 50}}
-                placeholder="Paciente"
-                onChange={(e) => handleInputChange('paciente', e.target.value)}
-                />
-            </div>
-            <div className="p-2">
-                <label htmlFor="Apelido">Apelido</label>
-                <Input
-                value={apelido}
-                type="text"
-                crossOrigin={undefined}
-                className=""
-                style={{width: 375, height: 50}}
-                placeholder="Apelido"
-                onChange={(e) => handleInputChange('apelido', e.target.value)}
-                />
-            </div>
-            <div className="p-2">
-                <label htmlFor="Nacionalidade">Nacionalidade</label>
-                <Input
-                value={nacionalidade}
-                type="text"
-                crossOrigin={undefined}
-                className=""
-                style={{width: 375, height: 50}}
-                placeholder="Nacionalidade"
-                onChange={(e) => handleInputChange('nacionalidade', e.target.value)}
-                />
-            </div>
-            <div className="p-2">
-                <label htmlFor="Nascimento">Nascimento</label>
-                <Input
-                value={dataDeNascimento}
-                type="date"
-                crossOrigin={undefined}
-                style={{width: 375, height: 50}}
-                placeholder="Nascimento"
-                onChange={(e) => handleInputChange('dataDeNascimento', e.target.value)}
-                />
-            </div>
-            <div className="p-2">
-                <label htmlFor="CPF">CPF</label>
-                <Input
-                value={cpf}
-                type="text"
-                crossOrigin={undefined}
-                className=""
-                style={{width: 375, height: 50}}
-                placeholder="Digite"
-                onChange={(e) => handleInputChange('cpf', e.target.value)}
-                />
-            </div>
-            <div className="p-2">
-                <label htmlFor="RG">RG</label>
-                <Input
-                value={rg}
-                type="text"
-                crossOrigin={undefined}
-                className=""
-                style={{width: 375, height: 50}}
-                placeholder="Digite"
-                onChange={(e) => handleInputChange('rg', e.target.value)}
-                />
-            </div>
-            <div className="p-2">
-                <label htmlFor="Gênero">Gênero</label>
-                    <Select
-                    value={genero || ""}
-                    label="Gênero"
-                    onChange={(value) => handleInputChange('genero', value|| "")} 
-                    style={{width: 375, height: 50}}
-                    >
-                        <Option value="Masculino">Masculino</Option>
-                        <Option value="Feminino">Feminino</Option>
-                        <Option value="Outro">Outro</Option>
-                    </Select>
-                    
-                </div>
-                <div className="p-2">
-                    <label htmlFor="Estado Civil">Estado Civil</label>
-                    <Select
-                    value={estadoCivil || ""}
-                    label="Estado civil"
-                    onChange={(value) => handleInputChange('estadoCivil', value|| "")} 
-                    
-                    style={{width: 375, height: 50}}
-                    >
-                        <Option>Casado(a)</Option>
-                        <Option>Solteiro(a)</Option>
-                        <Option>Viuvo(a)</Option>
-                    </Select>
-                </div>
-                <div className="w-full">
-                    <label htmlFor="Observaçoes Adicionais">Observações Adicionais</label>
-                    <Textarea
-                    onChange={(e) => handleInputChange('observacoesAdicionais', e.target.value)}
-                    value={observacoesAdicionais}
-                    label="Observações Adicionais"
-                    />
-                </div>
-            </form>   
-        </div>                   
+          <div>
+              <UserCircleIcon style={{height: 200}}/>
+          </div>
+          <form className="flex flex-wrap justify-start" onSubmit={handleSubmit}>
+              <div className="p-1 m-1">
+                  <label htmlFor="Paciente">Paciente</label>
+                  <Input
+                  type="text"
+                  value={paciente}
+                  crossOrigin={undefined}
+                  className=""
+                  style={{width: 367, height: 50}}
+                  placeholder="Paciente"
+                  onChange={(e) => handleInputChange('paciente', e.target.value)}
+                  />
+              </div>
+              <div className="p-1">
+                  <label htmlFor="Apelido">Apelido</label>
+                  <Input
+                  value={apelido}
+                  type="text"
+                  crossOrigin={undefined}
+                  className=""
+                  style={{width: 367, height: 50}}
+                  placeholder="Apelido"
+                  onChange={(e) => handleInputChange('apelido', e.target.value)}
+                  />
+              </div>
+              <div className="p-1">
+                  <label htmlFor="Nacionalidade">Nacionalidade</label>
+                  <Input
+                  value={nacionalidade}
+                  type="text"
+                  crossOrigin={undefined}
+                  className=""
+                  style={{width: 367, height: 50}}
+                  placeholder="Nacionalidade"
+                  onChange={(e) => handleInputChange('nacionalidade', e.target.value)}
+                  />
+              </div>
+              <div className="p-1">
+                  <label htmlFor="Nascimento">Nascimento</label>
+                  <Input
+                  value={dataDeNascimento}
+                  type="date"
+                  crossOrigin={undefined}
+                  style={{width: 367, height: 50}}
+                  placeholder="Nascimento"
+                  onChange={(e) => handleInputChange('dataDeNascimento', e.target.value)}
+                  />
+              </div>
+              <div className="p-1">
+                  <label htmlFor="CPF">CPF</label>
+                  <Input
+                  value={cpf}
+                  type="text"
+                  crossOrigin={undefined}
+                  className=""
+                  style={{width: 367, height: 50}}
+                  placeholder="Digite"
+                  onChange={(e) => handleInputChange('cpf', e.target.value)}
+                  />
+              </div>
+              <div className="p-1">
+                  <label htmlFor="RG">RG</label>
+                  <Input
+                  value={rg}
+                  type="text"
+                  crossOrigin={undefined}
+                  className=""
+                  style={{width: 367, height: 50}}
+                  placeholder="Digite"
+                  onChange={(e) => handleInputChange('rg', e.target.value)}
+                  />
+              </div>
+              <div className="p-1">
+                  <label htmlFor="Gênero">Gênero</label>
+                      <Select
+                      value={genero || ""}
+                      label="Gênero"
+                      onChange={(value) => handleInputChange('genero', value|| "")} 
+                      style={{width: 367, height: 50}}
+                      >
+                          <Option value="Masculino">Masculino</Option>
+                          <Option value="Feminino">Feminino</Option>
+                          <Option value="Outro">Outro</Option>
+                      </Select>
+                      
+                  </div>
+                  <div className="p-1">
+                      <label htmlFor="Estado Civil">Estado Civil</label>
+                      <Select
+                      value={estadoCivil || ""}
+                      label="Estado civil"
+                      onChange={(value) => handleInputChange('estadoCivil', value|| "")} 
+                      
+                      style={{width: 367, height: 50}}
+                      >
+                          <Option>Casado(a)</Option>
+                          <Option>Solteiro(a)</Option>
+                          <Option>Viuvo(a)</Option>
+                      </Select>
+                  </div>
+                  <div className="w-full">
+                      <label htmlFor="Observaçoes Adicionais">Observações Adicionais</label>
+                      <Textarea
+                      onChange={(e) => handleInputChange('observacoesAdicionais', e.target.value)}
+                      value={observacoesAdicionais}
+                      label="Observações Adicionais"
+                      />
+                  </div>
+              </form>   
+          </div>                   
             <div className="flex justify-end">
                 <Button className="p-3 text-lg bg-blue-500" onClick={handleToggleTab}>Próximo</Button>
             </div>
@@ -239,7 +239,7 @@ export default function CardComTabsParaAdicionarPaciente() {
       );
     } else if (activeTab === "contato") {
       return (
-        <Card className="p-2">
+        <Card className="p-1">
           {/* Conteúdo para a aba de Contato */}
                 <ContatoForm />
         </Card>
