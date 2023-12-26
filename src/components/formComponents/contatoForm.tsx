@@ -155,7 +155,7 @@ export default function ContatoForm() {
                   type="text"
                   value={cep}
                   crossOrigin={undefined}
-                  style={{width: 375, marginBottom: 5, height: 50}}
+                  style={{width: 367, marginBottom: 5, height: 50}}
                   required
                   placeholder="cep"
                   />
@@ -168,7 +168,7 @@ export default function ContatoForm() {
                   value={cidade}
                   crossOrigin={undefined}
                   className=""
-                  style={{width: 375, marginBottom: 5, height: 50}}
+                  style={{width: 367, marginBottom: 5, height: 50}}
                   required
                   placeholder="Cidade"
                   />
@@ -181,7 +181,7 @@ export default function ContatoForm() {
                   value={uf}
                   crossOrigin={undefined}
                   className=""
-                  style={{width: 375, marginBottom: 5, height: 50}}
+                  style={{width: 367, marginBottom: 5, height: 50}}
                   required
                   placeholder="UF"
                   />
@@ -193,7 +193,7 @@ export default function ContatoForm() {
                   type="text"
                   value={endereco}
                   crossOrigin={undefined}
-                  style={{width: 375, marginBottom: 5, height: 50}}
+                  style={{width: 367, marginBottom: 5, height: 50}}
                   required
                   placeholder="Endereço"
                   />
@@ -206,7 +206,7 @@ export default function ContatoForm() {
                   value={numero}
                   crossOrigin={undefined}
                   className=""
-                  style={{width: 375, marginBottom: 5, height: 50}}
+                  style={{width: 367, marginBottom: 5, height: 50}}
                   required
                   placeholder="Digite"
                   />
@@ -219,7 +219,7 @@ export default function ContatoForm() {
                   value={bairro}
                   crossOrigin={undefined}
                   className=""
-                  style={{width: 375, marginBottom: 5, height: 50}}
+                  style={{width: 367, marginBottom: 5, height: 50}}
                   required
                   placeholder="Digite"
                   />
@@ -232,7 +232,7 @@ export default function ContatoForm() {
                   crossOrigin={undefined}
                   value={complemento}
                   label="Complemento"
-                  style={{width: 375, marginBottom: 5, height: 50}}
+                  style={{width: 367, marginBottom: 5, height: 50}}
                   required
                   />
               </div>
