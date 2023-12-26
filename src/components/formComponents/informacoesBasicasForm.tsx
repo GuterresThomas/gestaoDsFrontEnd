@@ -33,21 +33,6 @@ export default function InformacoesPacientesForm({ formState, onFormChange, onSu
     const [genero, setGenero] = useState<string | null>(null);
     const [estadoCivil, setEstadoCivil] = useState<string | null>(null);
     const [observacoesAdicionais, setObservacoesAdicionais] = useState("")
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  
-    useEffect(() => {
-      const handleWindowResize = () => {
-        setWindowWidth(window.innerWidth);
-      };
-  
-      window.addEventListener('resize', handleWindowResize);
-  
-      return () => {
-        window.removeEventListener('resize', handleWindowResize);
-      };
-    }, []);
-  
     
     const handleInputChange = (fieldName: keyof FormData, value: string) => {
         onFormChange(fieldName, value);
@@ -107,9 +92,7 @@ export default function InformacoesPacientesForm({ formState, onFormChange, onSu
         <div>
             <UserCircleIcon style={{height: 200}}/>
         </div>
-        <form className="flex flex-wrap justify-start"
-        style={{ width: windowWidth < 640 ? '100%' : '100%' }}
-        onSubmit={handleSubmit}>
+        <form className="flex flex-wrap justify-start" onSubmit={handleSubmit}>
             <div className="p-2">
                 <label htmlFor="Paciente">Paciente</label>
                 <Input
@@ -117,7 +100,7 @@ export default function InformacoesPacientesForm({ formState, onFormChange, onSu
                 value={paciente}
                 crossOrigin={undefined}
                 className=""
-                style={{width: 400, height: 50}}
+                style={{width: 375, height: 50}}
                 placeholder="Paciente"
                 onChange={(e) => handleInputChange('paciente', e.target.value)}
                 />
@@ -129,7 +112,7 @@ export default function InformacoesPacientesForm({ formState, onFormChange, onSu
                 type="text"
                 crossOrigin={undefined}
                 className=""
-                style={{width: 400, height: 50}}
+                style={{width: 375, height: 50}}
                 placeholder="Apelido"
                 
                 onChange={(e) => handleInputChange('apelido', e.target.value)}
@@ -142,7 +125,7 @@ export default function InformacoesPacientesForm({ formState, onFormChange, onSu
                 type="text"
                 crossOrigin={undefined}
                 className=""
-                style={{width: 400, height: 50}}
+                style={{width: 375, height: 50}}
                 placeholder="Nacionalidade"
                 onChange={(e) => handleInputChange('nacionalidade', e.target.value)}
                 />
@@ -153,7 +136,7 @@ export default function InformacoesPacientesForm({ formState, onFormChange, onSu
                 value={dataDeNascimento}
                 type="date"
                 crossOrigin={undefined}
-                style={{width: 400, height: 50}}
+                style={{width: 375, height: 50}}
                 placeholder="Nascimento"
                 onChange={(e) => handleInputChange('dataDeNascimento', e.target.value)}
                 />
@@ -165,7 +148,7 @@ export default function InformacoesPacientesForm({ formState, onFormChange, onSu
                 type="text"
                 crossOrigin={undefined}
                 className=""
-                style={{width: 400, height: 50}}
+                style={{width: 375, height: 50}}
                 placeholder="Digite"
                 onChange={(e) => handleInputChange('cpf', e.target.value)}
                 />
@@ -177,7 +160,7 @@ export default function InformacoesPacientesForm({ formState, onFormChange, onSu
                 type="text"
                 crossOrigin={undefined}
                 className=""
-                style={{width: 400, height: 50}}
+                style={{width: 375, height: 50}}
                 placeholder="Digite"
                 onChange={(e) => handleInputChange('rg', e.target.value)}
                 />
@@ -188,7 +171,7 @@ export default function InformacoesPacientesForm({ formState, onFormChange, onSu
                 value={genero || ""}
                 label="Gênero"
                 onChange={(value) => handleInputChange('genero', value|| "")} 
-                style={{width: 400, height: 50}}
+                style={{width: 375, height: 50}}
                 >
                     <Option value="Masculino">Masculino</Option>
                     <Option value="Feminino">Feminino</Option>
@@ -203,7 +186,7 @@ export default function InformacoesPacientesForm({ formState, onFormChange, onSu
                 label="Estado civil"
                 onChange={(value) => handleInputChange('estadoCivil', value|| "")} 
                 
-                style={{width: 400, height: 50}}
+                style={{width: 375, height: 50}}
                 >
                     <Option>Casado(a)</Option>
                     <Option>Solteiro(a)</Option>
