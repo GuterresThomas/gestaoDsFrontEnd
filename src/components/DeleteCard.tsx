@@ -34,11 +34,10 @@ export default function DeleteCard({ handleClose }: { handleClose: () => void })
                 }, 2000);
             } else {
                 console.error('ID do paciente inválido.');
+                setOpenErrorMessage(true)
             }
         } catch (error) {
-            console.error('Erro ao excluir paciente:', error);
-            // Trate erros ou forneça feedback ao usuário, se necessário
-            setOpenErrorMessage(true)
+            console.error('Erro ao excluir paciente:', error)
         }
     };
 
