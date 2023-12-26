@@ -66,7 +66,7 @@ export default function DeleteCard({ handleClose }: { handleClose: () => void })
             <Alert open={open} onClose={() => setOpen(false)}>
                 Sucesso ao deletar paciente.
             </Alert>
-            <Alert open={openErrorMessage} onClose={() => setOpenErrorMessage(false)} className="top-0 absolute">
+            <Alert open={openErrorMessage} onClose={() => setOpenErrorMessage(false)}>
                 Erro ao deletar paciente.
             </Alert>
             <CardFooter className="flex justify-end">        
