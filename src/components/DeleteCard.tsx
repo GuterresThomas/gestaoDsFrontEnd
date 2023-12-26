@@ -29,8 +29,9 @@ export default function DeleteCard({ handleClose }: { handleClose: () => void })
                 const response = await axios.delete(`https://testepraticogestaodsapi.up.railway.app/api/v1/pacientes/${patientId}`);
                 console.log(response.data); // Mensagem de confirmação ou outro feedback do backend
                 setOpen(true)
-                window.location.href = ('/')
-                
+                setTimeout(() => {
+                    window.location.href = '/';
+                }, 2000);
             } else {
                 console.error('ID do paciente inválido.');
             }
