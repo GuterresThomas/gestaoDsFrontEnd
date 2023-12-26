@@ -117,7 +117,7 @@ export default function CardComTabsParaAdicionarPaciente() {
   const renderTabContent = () => {
     if (activeTab === "informacoesBasicas") {
       return (
-        <Card className="p-2">
+        <Card className="p-1 w-screen">
           <div className="p-10">
         <div>
             <UserCircleIcon style={{height: 200}}/>
