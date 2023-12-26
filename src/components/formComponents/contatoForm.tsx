@@ -148,7 +148,7 @@ export default function ContatoForm() {
         </div>
         <form onSubmit={handleContatoFormSubmit}>
             <div className="flex flex-wrap justify-start">
-              <div className="p-2">
+              <div className="">
                   <label htmlFor="cep">cep</label>
                   <Input
                   onChange={(e) => handleInputChange('cep', e.target.value)}
@@ -156,12 +156,12 @@ export default function ContatoForm() {
                   value={cep}
                   crossOrigin={undefined}
                   className=""
-                  style={{width: 350, height: 50}}
+                  style={{width: 375, marginBottom: 5, height: 50}}
                   required
                   placeholder="cep"
                   />
               </div>
-              <div className="p-2">
+              <div className="">
                   <label htmlFor="cidade">Cidade</label>
                   <Input
                   onChange={(e) => handleInputChange('cidade', e.target.value)}
@@ -169,12 +169,12 @@ export default function ContatoForm() {
                   value={cidade}
                   crossOrigin={undefined}
                   className=""
-                  style={{width: 350, height: 50}}
+                  style={{width: 375, marginBottom: 5, height: 50}}
                   required
                   placeholder="Cidade"
                   />
               </div>
-              <div className="p-2">
+              <div className="">
                   <label htmlFor="UF">UF</label>
                   <Input
                   onChange={(e) => handleInputChange('uf', e.target.value)}
@@ -182,24 +182,24 @@ export default function ContatoForm() {
                   value={uf}
                   crossOrigin={undefined}
                   className=""
-                  style={{width: 350, height: 50}}
+                  style={{width: 375, marginBottom: 5, height: 50}}
                   required
                   placeholder="UF"
                   />
               </div>
-              <div className="p-2">
+              <div className="">
                   <label htmlFor="Endereço">Endereço</label>
                   <Input
                   onChange={(e) => handleInputChange('endereco', e.target.value)}
                   type="text"
                   value={endereco}
                   crossOrigin={undefined}
-                  style={{width: 350, height: 50}}
+                  style={{width: 375, marginBottom: 5, height: 50}}
                   required
                   placeholder="Endereço"
                   />
               </div>
-              <div className="p-2">
+              <div className="">
                   <label htmlFor="Numero">Numero</label>
                   <Input
                   onChange={(e) => handleInputChange('numero', e.target.value)}
@@ -207,12 +207,12 @@ export default function ContatoForm() {
                   value={numero}
                   crossOrigin={undefined}
                   className=""
-                  style={{width: 350, height: 50}}
+                  style={{width: 375, marginBottom: 5, height: 50}}
                   required
                   placeholder="Digite"
                   />
               </div>
-              <div className="p-2">
+              <div className="">
                   <label htmlFor="Bairro">Bairro</label>
                   <Input
                   onChange={(e) => handleInputChange('bairro', e.target.value)}
@@ -220,12 +220,12 @@ export default function ContatoForm() {
                   value={bairro}
                   crossOrigin={undefined}
                   className=""
-                  style={{width: 350, height: 50}}
+                  style={{width: 375, marginBottom: 5, height: 50}}
                   required
                   placeholder="Digite"
                   />
               </div>
-              <div className="p-2">
+              <div className="">
                   <label htmlFor="Complemento">Complemento</label>
                   <Input
                   onChange={(e) => handleInputChange('complemento', e.target.value)}
@@ -233,7 +233,7 @@ export default function ContatoForm() {
                   crossOrigin={undefined}
                   value={complemento}
                   label="Complemento"
-                  style={{width: 350, height: 50}}
+                  style={{width: 375, marginBottom: 5, height: 50}}
                   required
                   />
               </div>
@@ -244,6 +244,7 @@ export default function ContatoForm() {
             <Alert open={openErrorMessage} onClose={() => setOpenErrorMessage(false)}>
                 Erro ao adicionar paciente.
             </Alert>
+            <br/>
             <div className="flex justify-end">
               <Button className="p-3 text-lg bg-blue-500" type="submit">
                   <Typography className="font-bold text-md p-1">Salvar</Typography>
