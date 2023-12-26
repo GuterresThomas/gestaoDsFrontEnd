@@ -87,7 +87,6 @@ export default function EditForm() {
           const patientData: EditFormData = response.data;
           // Atualiza o estado do formulário com os dados do paciente
           setEditFormState(patientData);
-          localStorage.removeItem('selectedPatientId')
           console.log('id logo após abrir o modal de edição: ', parsedPatientId)
         } catch (error) {
           console.error('Erro ao buscar dados do paciente:', error);
