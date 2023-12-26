@@ -148,20 +148,19 @@ export default function ContatoForm() {
         </div>
         <form onSubmit={handleContatoFormSubmit}>
             <div className="flex flex-wrap justify-start">
-              <div className="">
+              <div className="p-1">
                   <label htmlFor="cep">cep</label>
                   <Input
                   onChange={(e) => handleInputChange('cep', e.target.value)}
                   type="text"
                   value={cep}
                   crossOrigin={undefined}
-                  className=""
                   style={{width: 375, marginBottom: 5, height: 50}}
                   required
                   placeholder="cep"
                   />
               </div>
-              <div className="">
+              <div className="p-1">
                   <label htmlFor="cidade">Cidade</label>
                   <Input
                   onChange={(e) => handleInputChange('cidade', e.target.value)}
@@ -174,7 +173,7 @@ export default function ContatoForm() {
                   placeholder="Cidade"
                   />
               </div>
-              <div className="">
+              <div className="p-1">
                   <label htmlFor="UF">UF</label>
                   <Input
                   onChange={(e) => handleInputChange('uf', e.target.value)}
@@ -187,7 +186,7 @@ export default function ContatoForm() {
                   placeholder="UF"
                   />
               </div>
-              <div className="">
+              <div className="p-1">
                   <label htmlFor="Endereço">Endereço</label>
                   <Input
                   onChange={(e) => handleInputChange('endereco', e.target.value)}
@@ -199,7 +198,7 @@ export default function ContatoForm() {
                   placeholder="Endereço"
                   />
               </div>
-              <div className="">
+              <div className="p-1">
                   <label htmlFor="Numero">Numero</label>
                   <Input
                   onChange={(e) => handleInputChange('numero', e.target.value)}
@@ -212,7 +211,7 @@ export default function ContatoForm() {
                   placeholder="Digite"
                   />
               </div>
-              <div className="">
+              <div className="p-1">
                   <label htmlFor="Bairro">Bairro</label>
                   <Input
                   onChange={(e) => handleInputChange('bairro', e.target.value)}
@@ -225,7 +224,7 @@ export default function ContatoForm() {
                   placeholder="Digite"
                   />
               </div>
-              <div className="">
+              <div className="p-1">
                   <label htmlFor="Complemento">Complemento</label>
                   <Input
                   onChange={(e) => handleInputChange('complemento', e.target.value)}
