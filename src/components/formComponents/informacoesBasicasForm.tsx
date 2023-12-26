@@ -33,6 +33,21 @@ export default function InformacoesPacientesForm({ formState, onFormChange, onSu
     const [genero, setGenero] = useState<string | null>(null);
     const [estadoCivil, setEstadoCivil] = useState<string | null>(null);
     const [observacoesAdicionais, setObservacoesAdicionais] = useState("")
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  
+    useEffect(() => {
+      const handleWindowResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
+  
+      window.addEventListener('resize', handleWindowResize);
+  
+      return () => {
+        window.removeEventListener('resize', handleWindowResize);
+      };
+    }, []);
+  
     
     const handleInputChange = (fieldName: keyof FormData, value: string) => {
         onFormChange(fieldName, value);
@@ -92,7 +107,9 @@ export default function InformacoesPacientesForm({ formState, onFormChange, onSu
         <div>
             <UserCircleIcon style={{height: 200}}/>
         </div>
-        <form className="flex flex-wrap justify-start" onSubmit={handleSubmit}>
+        <form className="flex flex-wrap justify-start"
+        style={{ width: windowWidth < 640 ? '100%' : '100%' }}
+        onSubmit={handleSubmit}>
             <div className="p-2">
                 <label htmlFor="Paciente">Paciente</label>
                 <Input

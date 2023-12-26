@@ -65,10 +65,13 @@ import { EllipsisHorizontalIcon } from "@heroicons/react/24/outline";
                             </div>
                         </div>
                         <a href="/addPaciente">  
-                          <Button className="flex ml-3 p-2 md:w-full bg-blue-500" type="submit"
+                          <Button className="flex ml-1 p-2 md:w-full bg-blue-500" type="submit"
                           >
-                              <PlusIcon className="h-6"></PlusIcon>
-                              <Typography className="font-bold text-md p-1">Adicionar paciente</Typography>
+                              <PlusIcon 
+                                className="h-7 mt-1" 
+                                style={{ display: windowWidth < 640 ? 'none' : 'block' }}>
+                              </PlusIcon>
+                              <Typography className="font-bold sm:text-xs md:text-md p-1">Adicionar paciente</Typography>
                           </Button>
                         </a>  
                 </div>
