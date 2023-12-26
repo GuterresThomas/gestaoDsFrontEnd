@@ -237,19 +237,19 @@ export default function ContatoForm() {
                   required
                   />
               </div>
-            </div>
+            </div>    
+            <Alert open={open} onClose={() => setOpen(false)}>
+                Sucesso ao adicionar paciente.
+            </Alert>
+            <Alert open={openErrorMessage} onClose={() => setOpenErrorMessage(false)}>
+                Erro ao adicionar paciente.
+            </Alert>
             <div className="flex justify-end">
               <Button className="p-3 text-lg bg-blue-500" type="submit">
                   <Typography className="font-bold text-md p-1">Salvar</Typography>
               </Button>
             </div>  
         </form>
-        <Alert open={open} onClose={() => setOpen(false)}>
-            Sucesso ao adicionar paciente.
-        </Alert>
-        <Alert open={openErrorMessage} onClose={() => setOpenErrorMessage(false)}>
-            Erro ao adicionar paciente.
-        </Alert>
     </div>
   );
 };

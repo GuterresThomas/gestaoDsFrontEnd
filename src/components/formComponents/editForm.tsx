@@ -118,6 +118,24 @@ export default function EditForm() {
       console.log('id armazenado no estado, na hora do envio: ', patientId)
       setOpen(true)
       setPatientId(null);
+      setEditFormState({
+        paciente: "",
+    apelido: "",
+    nacionalidade: "",
+    dataDeNascimento: "",
+    cpf: "",
+    rg: "",
+    genero: "",
+    estadoCivil: "",
+    observacoesAdicionais: "",   
+    cep: "",
+    cidade: "",
+    uf: "",
+    endereco: "",
+    numero: "",
+    bairro: "",
+    complemento: "",
+      })
     } catch (error) {
       console.error('Erro ao atualizar paciente:', error);
       setOpenErrorMessage(true)
@@ -323,18 +341,18 @@ export default function EditForm() {
                   style={{width: 375, borderRight: 'none',  height: 50}}
                   />
               </div>
+              <Alert open={open} onClose={() => setOpen(false)}>
+                  Sucesso ao editar paciente.
+              </Alert>
+              <Alert open={openErrorMessage} onClose={() => setOpenErrorMessage(false)}>
+                    Erro ao editar paciente.
+              </Alert>  
               <div className="flex justify-between p-5">
                 <Button className="text-lg p-3 bg-blue-500" type="submit">
                 Salvar
                 </Button>
               </div>
       </form>
-      <Alert open={open} onClose={() => setOpen(false)}>
-        Sucesso ao editar paciente.
-    </Alert>
-    <Alert open={openErrorMessage} onClose={() => setOpenErrorMessage(false)}>
-        Erro ao editar paciente.
-    </Alert>
     </div>
   );
 };
