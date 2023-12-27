@@ -154,7 +154,7 @@ export default function TabelaInformacoesBasicas() {
       >
         <Card style={{overflowY: 'auto', scrollbarWidth: 'thin', height: 500, padding: 30}}>
           <div className="">
-            <XMarkIcon style={{height: 40, cursor: 'pointer'}} onClick={handleCloseEditForm}></XMarkIcon>
+            <XMarkIcon style={{height: 40, cursor: 'pointer'}} onClick={() => {handleCloseEditForm(), handleClose()}}></XMarkIcon>
             <EditForm/>
           </div>
         </Card>
@@ -169,10 +169,10 @@ export default function TabelaInformacoesBasicas() {
         <div className="flex justify-end" style={{height:50}}>
           <XMarkIcon
             style={{height: 30, cursor: 'pointer', marginTop:18, marginRight: 10, zIndex: 9999 }}
-            onClick={handleCloseDeleteCard}
+            onClick={() => {handleCloseDeleteCard(), handleClose()}}
           />
         </div>
-        <DeleteCard handleClose={handleCloseDeleteCard}/>
+        <DeleteCard handleClose={() => {handleCloseDeleteCard(), handleClose()}}/>
       </Card>
       </Dialog>
     </Card> 

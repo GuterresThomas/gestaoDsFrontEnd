@@ -135,6 +135,9 @@ export default function EditForm() {
     bairro: "",
     complemento: "",
       })
+      setTimeout(() => {
+        window.location.href = '/';
+    }, 2000);
     } catch (error) {
       console.error('Erro ao atualizar paciente:', error);
       setOpenErrorMessage(true)
